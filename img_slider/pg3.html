@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Production</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    #slider {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #f9f9f9; 
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .slide img:hover {
+      transform: scale(1.1);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s ease;
+      z-index: 2;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev-btn {
+      left: 10px;
+    }
+
+    .next-btn {
+      right: 10px;
+    }
+
+    .detail-content {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+    }
+
+    .detail-content img {
+      max-width: 40%;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .detail-content h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .detail-content p {
+      line-height: 1.8;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#slider">Video Gallery</a></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#details">Details</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" style="text-align:center">
+      <h1 style="font-size: 36px;">Explore Video Production</h1>
+      <h3>Effectively communicate your message with our high-quality corporate, promotional, and event videos.</h3>
+    </section>
+
+    <section id="slider">
+      <h2>Video Gallery</h2>
+      <div id="carousel" class="slider-wrapper">
+        <div class="slider">
+          <div class="slide">
+            <img src="img1/vd.jpeg" alt="Corporate Video">
+          </div>
+          <div class="slide">
+            <img src="img1/vd2.jpg" alt="Promotional Video">
+          </div>
+          <div class="slide">
+            <img src="img1/vd3.jpg" alt="Event Video">
+          </div>
+          <div class="slide">
+            <img src="img1/vd4.jpg" alt="Product Video">
+          </div>
+          <div class="slide">
+            <img src="img1/vd5.jpg" alt="Training Video">
+          </div>
+          <div class="slide">
+            <img src="img1/vd6.jpg" alt="Documentary Video">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev-btn" onclick="prevSlide()">&#10094; Prev</button>
+      <button class="carousel-btn next-btn" onclick="nextSlide()">Next &#10095;</button>
+    </section>
+
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>Welcome to the dynamic world of video production! In today's digital era, video content is a powerful tool for businesses and organizations to engage, inform, and captivate audiences. Whether you're showcasing your brand's story, launching a new product, or documenting a memorable event, video production enables you to convey your message effectively through compelling visuals and narratives.</p>
+      <p>This section aims to explore the essential aspects of video production, from conceptualization and filming to editing and distribution. Discover how our expertise in creating corporate videos, promotional campaigns, and event coverage can elevate your brand's presence and communication strategy.</p>
+    </section>
+
+    <section id="details">
+      <h2>Detailed Information about Video Production</h2>
+
+      <div class="detail-content">
+        <img src="img1/pg4.jpg" alt="Video Production Overview">
+        <p>Video production involves the process of creating visual content for various purposes, including marketing, education, entertainment, and communication. It encompasses pre-production (planning and scripting), production (filming and recording), post-production (editing and finalizing), and distribution (publishing and sharing).</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Corporate Videos</h3>
+        <p>Corporate videos are designed to showcase a company's culture, values, products, and services to internal and external stakeholders. They often include interviews, testimonials, and behind-the-scenes footage to reinforce brand identity and engage viewers in the corporate narrative.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Promotional Videos</h3>
+        <p>Promotional videos aim to promote products, services, events, or campaigns effectively. They utilize storytelling, visual effects, and compelling narratives to capture audience attention, convey key messages, and encourage viewer engagement and action.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Event Coverage</h3>
+        <p>Event videos capture live events such as conferences, seminars, trade shows, and corporate gatherings. They highlight event highlights, keynote speeches, attendee interactions, and special moments, providing a comprehensive overview and post-event marketing material.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Video Editing Techniques</h3>
+        <p>Video editing involves refining raw footage into a cohesive and visually appealing final product. Techniques include cutting, trimming, transitions, color grading, audio enhancement, and adding special effects to enhance storytelling and evoke viewer emotions.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Emerging Trends in Video Production</h3>
+        <p>Emerging trends in video production include the rise of live streaming for real-time engagement, interactive video content that allows viewer participation, 360-degree videos for immersive experiences, and AI-powered tools for automated editing and personalized video recommendations.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.querySelector('.slider');
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      let currentIndex = 0;
+
+      function updateSlider() {
+        const slideWidth = slides[0].offsetWidth;
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      window.addEventListener('resize', function() {
+        updateSlider();
+      });
+
+      updateSlider();
+
+      setInterval(nextSlide, 3000);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art and Illustration Image Slider</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    #slider {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #f9f9f9; 
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .slide img:hover {
+      transform: scale(1.1);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s ease;
+      z-index: 2;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev-btn {
+      left: 10px;
+    }
+
+    .next-btn {
+      right: 10px;
+    }
+
+    .detail-content {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+    }
+
+    .detail-content img {
+      max-width: 40%;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .detail-content h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .detail-content p {
+      line-height: 1.8;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#slider">Image Slider</a></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#details">Details</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" style="text-align:center">
+      <h1 style="font-size: 36px;">Explore Art and Illustration</h1>
+      <h3>Bring your vision to life with custom illustrations, digital art, and murals created by our talented artists.</h3>
+    </section>
+
+    <section id="slider">
+      <h2>Art and Illustration</h2>
+      <div id="carousel" class="slider-wrapper">
+        <div class="slider">
+          <div class="slide">
+            <img src="img1/a1.jpg" alt="Image 1">
+          </div>
+          <div class="slide">
+            <img src="img1/a2.jpg" alt="Image 2">
+          </div>
+          <div class="slide">
+            <img src="img1/a3.jpg" alt="Image 3">
+          </div>
+          <div class="slide">
+            <img src="img1/a4.jpg" alt="Image 4">
+          </div>
+          <div class="slide">
+            <img src="img1/a5.jpeg" alt="Image 5">
+          </div>
+          <div class="slide">
+            <img src="img1/a6.jpg" alt="Image 6">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev-btn" onclick="prevSlide()">&#10094; Prev</button>
+      <button class="carousel-btn next-btn" onclick="nextSlide()">Next &#10095;</button>
+    </section>
+
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>Bring your vision to life with custom illustrations, digital art, and murals created by our talented artists. Whether you're looking to enhance your brand, decorate a space, or convey a unique message, art and illustration are powerful mediums that captivate and inspire.</p>
+      <p>From intricate designs to vibrant paintings, the world of art and illustration offers endless possibilities for creativity and expression. This section invites you to explore the beauty and impact of visual storytelling through our diverse portfolio of artistic creations.</p>
+    </section>
+
+    <section id="details">
+      <h2>Detailed Information about Art and Illustration</h2>
+
+      <div class="detail-content">
+        <img src="img1/pg5.jfif" alt="Art and Illustration Overview">
+        <p>Art and illustration encompass a wide range of styles and techniques used to create visual art pieces. From traditional paintings and sketches to digital artworks and murals, artists employ various mediums and tools to bring ideas and concepts to life.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Custom Illustrations</h3>
+        <p>Custom illustrations are tailor-made artworks that cater to specific requirements and themes. They are often used in branding, editorial content, advertising, and personal projects to convey unique messages and captivate audiences with original visual storytelling.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Digital Art</h3>
+        <p>Digital art refers to artworks created using digital tools and software. It encompasses digital paintings, graphic designs, 3D modeling, and interactive media. Digital artists leverage technology to explore new dimensions of creativity and produce visually stunning and innovative artworks.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Mural Art</h3>
+        <p>Mural art involves large-scale artworks painted directly on walls or surfaces. It transforms spaces, enhances environments, and communicates cultural narratives. Muralists blend artistic techniques with architectural elements to create impactful and site-specific artworks that resonate with communities.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Artistic Techniques</h3>
+        <p>Artists employ diverse techniques such as realism, abstraction, surrealism, and impressionism to express emotions, ideas, and stories through visual art. Each technique offers a unique aesthetic and perspective, enriching the artistic landscape and inviting viewers to interpret and engage with artworks on multiple levels.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Emerging Trends</h3>
+        <p>Emerging trends in art and illustration include the fusion of traditional and digital mediums, interactive and augmented reality artworks, and the integration of cultural diversity and social commentary in artistic expressions. Artists continue to push boundaries and redefine art forms in response to evolving societal and technological landscapes.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.querySelector('.slider');
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      let currentIndex = 0;
+
+      function updateSlider() {
+        const slideWidth = slides[0].offsetWidth;
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      window.addEventListener('resize', function() {
+        updateSlider();
+      });
+
+      updateSlider();
+
+      setInterval(nextSlide, 3000);
+    });
+  </script>
+
+</body>
+</html>

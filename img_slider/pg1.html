@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Dev Image Slider</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    #slider {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #f9f9f9; 
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .slide img:hover {
+      transform: scale(1.1);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s ease;
+      z-index: 2;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev-btn {
+      left: 10px;
+    }
+
+    .next-btn {
+      right: 10px;
+    }
+
+    .detail-content {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+    }
+
+    .detail-content img {
+      max-width: 40%;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .detail-content h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .detail-content p {
+      line-height: 1.8;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#slider">Image Slider</a></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#details">Details</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" style="text-align:center">
+      <h1 style="font-size: 36px;">Explore Web Development</h1>
+      <h3>Master the Art of Building Websites</h3>
+    </section>
+
+    <section id="slider">
+      <h2>WEB DEVElOPMENT</h2>
+      <div id="carousel" class="slider-wrapper">
+        <div class="slider">
+          <div class="slide">
+            <img src="img1/wd1.jpg" alt="Image 1">
+          </div>
+          <div class="slide">
+            <img src="img1/wd5.jpeg" alt="Image 2">
+          </div>
+          <div class="slide">
+            <img src="img1/wd4.jpg" alt="Image 3">
+          </div>
+          <div class="slide">
+            <img src="img1/wd3.jpg" alt="Image 4">
+          </div>
+          <div class="slide">
+            <img src="img1/wd2.jpg" alt="Image 5">
+          </div>
+          <div class="slide">
+            <img src="img1/wd6.jpg" alt="Image 6">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev-btn" onclick="prevSlide()">&#10094; Prev</button>
+      <button class="carousel-btn next-btn" onclick="nextSlide()">Next &#10095;</button>
+    </section>
+
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>Welcome to the fascinating world of web development! In today's digital age, web development is the cornerstone of creating engaging and functional websites that cater to diverse audiences. Whether you're interested in designing user interfaces, optimizing performance, or developing dynamic web applications, mastering web development opens up endless opportunities.</p>
+      <p>From front-end technologies like HTML, CSS, and JavaScript to back-end frameworks such as Node.js and Django, every aspect of web development plays a crucial role in shaping the online experiences we interact with daily. This section aims to introduce you to the fundamental concepts and tools used by web developers worldwide.</p>
+    </section>
+
+    <section id="details">
+      <h2>Detailed Information about Web Development</h2>
+
+      <div class="detail-content">
+        <img src="img1/pg1.jpg" alt="Web Development Overview">
+        <p>Web development encompasses a wide array of skills and disciplines in the creation and maintenance of websites. It includes web design, web publishing, web programming, and database management. A successful web development process involves understanding client requirements, planning, execution, testing, and ongoing maintenance.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Front-end Development</h3>
+        <p>Front-end development involves creating the user interface and experience that users interact with directly. It focuses on using HTML, CSS, and JavaScript to design responsive and visually appealing websites. Front-end developers ensure that web pages are accessible, fast-loading, and compatible across different devices and browsers.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Back-end Development</h3>
+        <p>Back-end development deals with the server-side logic and database interactions that enable the functioning of web applications. It involves using frameworks and programming languages like Node.js, Python (Django), PHP (Laravel), and Ruby on Rails to handle data processing, security, and server management.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Database Management</h3>
+        <p>Database management is crucial for storing, organizing, and retrieving data efficiently within web applications. It involves designing database schemas, optimizing queries, ensuring data integrity, and implementing robust backup and recovery strategies. Popular database systems include MySQL, PostgreSQL, MongoDB, and Firebase.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Web Security</h3>
+        <p>Web security focuses on protecting websites and web applications from security threats and vulnerabilities. It includes implementing HTTPS encryption, secure authentication methods, input validation, and defense against common attacks like SQL injection, cross-site scripting (XSS), and cross-site request forgery (CSRF).</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Emerging Trends</h3>
+        <p>Emerging trends in web development include the rise of Progressive Web Apps (PWAs) that offer app-like experiences, Single Page Applications (SPAs) built with frameworks like React and Angular for seamless user interactions, and the integration of artificial intelligence (AI) to enhance personalization and automation within web applications.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.querySelector('.slider');
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      let currentIndex = 0;
+
+      function updateSlider() {
+        const slideWidth = slides[0].offsetWidth;
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      window.addEventListener('resize', function() {
+        updateSlider();
+      });
+
+      updateSlider();
+
+      setInterval(nextSlide, 3000);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphic Design Services</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    #slider {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #f9f9f9; 
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .slide img:hover {
+      transform: scale(1.1);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s ease;
+      z-index: 2;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev-btn {
+      left: 10px;
+    }
+
+    .next-btn {
+      right: 10px;
+    }
+
+    .detail-content {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+    }
+
+    .detail-content img {
+      max-width: 40%;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .detail-content h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .detail-content p {
+      line-height: 1.8;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#slider">Portfolio</a></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#details">Services</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" style="text-align:center">
+      <h1 style="font-size: 36px;">Graphic Design Services</h1>
+      <h3>Stand out with our creative graphic design solutions, including logos, brand identity, and marketing materials.</h3>
+    </section>
+
+    <section id="slider">
+      <h2>Graphic Design Portfolio</h2>
+      <div id="carousel" class="slider-wrapper">
+        <div class="slider">
+          <div class="slide">
+            <img src="img1/gd1.jpg" alt="Logo Design">
+          </div>
+          <div class="slide">
+            <img src="img1/gd2.jpg" alt="Brand Identity">
+          </div>
+          <div class="slide">
+            <img src="img1/gd3.jpg" alt="Marketing Materials">
+          </div>
+          <div class="slide">
+            <img src="img1/gd4.jpg" alt="Packaging Design">
+          </div>
+          <div class="slide">
+            <img src="img1/gd5.jpg" alt="Illustrations">
+          </div>
+          <div class="slide">
+            <img src="img1/gd6.jpg" alt="Digital Art">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev-btn" onclick="prevSlide()">&#10094; Prev</button>
+      <button class="carousel-btn next-btn" onclick="nextSlide()">Next &#10095;</button>
+    </section>
+
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>Welcome to our creative graphic design studio! We specialize in delivering unique and impactful graphic design solutions that help businesses and brands stand out in today's competitive market. From eye-catching logos and comprehensive brand identities to compelling marketing materials and digital illustrations, we are dedicated to transforming your vision into visually stunning reality.</p>
+      <p>At our studio, we combine creativity with strategic thinking to craft designs that resonate with your target audience and reflect your brand's essence. Whether you're launching a new venture or looking to refresh your brand identity, our team is committed to exceeding your expectations with every project.</p>
+    </section>
+
+    <section id="details">
+      <h2>Our Graphic Design Services</h2>
+
+      <div class="detail-content">
+        <img src="img1/pg7.jpg" alt="Graphic Design Overview">
+        <p>Graphic design encompasses the art and practice of planning and projecting ideas and experiences with visual and textual content. It involves creating visual concepts using various tools and techniques to communicate messages that inspire, inform, and captivate audiences.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Logo Design</h3>
+        <p>Logo design involves creating a symbol or emblem that represents a business or brand. It aims to visually communicate the company's identity and values, leaving a lasting impression on customers and stakeholders.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Brand Identity</h3>
+        <p>Brand identity encompasses the visual elements of a brand, including logos, typography, colors, and imagery. It establishes a cohesive and recognizable look and feel that reflects the brand's personality and values across all communication channels.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Marketing Materials</h3>
+        <p>Marketing materials include various collateral such as brochures, flyers, posters, business cards, and digital ads designed to promote products or services effectively. They are crafted to engage and persuade target audiences, driving brand awareness and customer engagement.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Packaging Design</h3>
+        <p>Packaging design involves creating attractive and functional packaging solutions that protect products while enhancing their appeal on shelves. It integrates branding elements and communicates product features, benefits, and brand values to consumers.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Illustrations and Digital Art</h3>
+        <p>Illustrations and digital art encompass creating visually compelling images, drawings, and artworks that communicate ideas and concepts in a captivating manner. They are used in various applications, including editorial, advertising, and digital media.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.querySelector('.slider');
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      let currentIndex = 0;
+
+      function updateSlider() {
+        const slideWidth = slides[0].offsetWidth;
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      window.addEventListener('resize', function() {
+        updateSlider();
+      });
+
+      updateSlider();
+
+      setInterval(nextSlide, 3000);
+    });
+  </script>
+
+</body>
+</html>

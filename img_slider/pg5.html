@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Services</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    #slider {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #f9f9f9; 
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .slide img:hover {
+      transform: scale(1.1);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: background-color 0.3s ease;
+      z-index: 2;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev-btn {
+      left: 10px;
+    }
+
+    .next-btn {
+      right: 10px;
+    }
+
+    .detail-content {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+    }
+
+    .detail-content img {
+      max-width: 40%;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .detail-content h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .detail-content p {
+      line-height: 1.8;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#slider">Gallery</a></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#details">Services</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" style="text-align:center">
+      <h1 style="font-size: 36px;">Digital Marketing Services</h1>
+      <h3>Boost your online presence with our SEO, social media management, and content creation services.</h3>
+    </section>
+
+    <section id="slider">
+      <h2>Digital Marketing Gallery</h2>
+      <div id="carousel" class="slider-wrapper">
+        <div class="slider">
+          <div class="slide">
+            <img src="img1/dm1.jpg" alt="SEO Services">
+          </div>
+          <div class="slide">
+            <img src="img1/dm2.jpg" alt="Social Media Management">
+          </div>
+          <div class="slide">
+            <img src="img1/dm3.jpg" alt="Content Creation">
+          </div>
+          <div class="slide">
+            <img src="img1/dm4.jpg" alt="Digital Advertising">
+          </div>
+          <div class="slide">
+            <img src="img1/dm5.jpg" alt="Email Marketing">
+          </div>
+          <div class="slide">
+            <img src="img1/dm6.jpg" alt="Analytics and Reporting">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn prev-btn" onclick="prevSlide()">&#10094; Prev</button>
+      <button class="carousel-btn next-btn" onclick="nextSlide()">Next &#10095;</button>
+    </section>
+
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>Welcome to the world of digital marketing! In today's competitive landscape, establishing a strong online presence is essential for business growth and success. Digital marketing encompasses strategies and techniques aimed at enhancing brand visibility, attracting target audiences, and driving meaningful engagement across digital platforms.</p>
+      <p>At our agency, we specialize in comprehensive digital marketing solutions tailored to meet your unique business goals. From search engine optimization (SEO) and social media management to compelling content creation and data-driven analytics, we are committed to maximizing your online reach and fostering sustainable growth.</p>
+    </section>
+
+    <section id="details">
+      <h2>Our Digital Marketing Services</h2>
+
+      <div class="detail-content">
+        <img src="img1/pg6.jpg" alt="Digital Marketing Overview">
+        <p>Digital marketing involves leveraging digital channels such as search engines, social media, email, and websites to connect with current and prospective customers. It includes a diverse range of services designed to optimize online visibility, increase traffic, and generate leads and sales.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Search Engine Optimization (SEO)</h3>
+        <p>SEO focuses on improving a website's visibility in search engine results pages (SERPs) through organic search. It involves optimizing website content, meta tags, keywords, and backlinks to enhance rankings and attract targeted traffic from search engines like Google.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Social Media Management</h3>
+        <p>Social media management entails creating, scheduling, analyzing, and engaging with content posted on social media platforms such as Facebook, Instagram, Twitter, and LinkedIn. It aims to build brand awareness, drive website traffic, and foster community engagement.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Content Creation and Marketing</h3>
+        <p>Content creation involves developing high-quality, relevant, and valuable content in various formats, including articles, blogs, videos, infographics, and more. Content marketing focuses on distributing this content strategically to attract and retain a defined audience, ultimately driving profitable customer action.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Email Marketing</h3>
+        <p>Email marketing utilizes email campaigns to communicate with potential and existing customers, promote products or services, drive sales, and build customer loyalty. It involves crafting personalized messages, segmenting email lists, and analyzing campaign performance to optimize results.</p>
+      </div>
+
+      <div class="detail-content">
+        <h3>Analytics and Reporting</h3>
+        <p>Analytics and reporting are integral to digital marketing strategies, providing insights into campaign performance, audience behavior, and ROI. By analyzing data from various digital channels, businesses can make informed decisions, refine strategies, and achieve measurable business objectives.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.querySelector('.slider');
+      const slides = document.querySelectorAll('.slide');
+      const totalSlides = slides.length;
+      let currentIndex = 0;
+
+      function updateSlider() {
+        const slideWidth = slides[0].offsetWidth;
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      window.addEventListener('resize', function() {
+        updateSlider();
+      });
+
+      updateSlider();
+
+      setInterval(nextSlide, 3000);
+    });
+  </script>
+
+</body>
+</html>
